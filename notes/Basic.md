@@ -7,7 +7,7 @@
 *  it considers the sequence generated thus far, and attends to the part of the image that needs describing next.
 1. soft attention：the weights of the pixels add up to 1
 ### Decoder: tensors to words
-* use Recurrent Neural Network (RNN)
+* use Recurrent Neural Network (RNN): prediction based on the previous data
     1.  LSTM: Each predicted word is used to generate the next word
         cell state: long-term memory
         hidden state: short-term memory
