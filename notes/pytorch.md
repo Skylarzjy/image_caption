@@ -1,0 +1,4 @@
+### autograde
+* ``torch.Tensor`` is the central class of the package. If you set its attribute ``.requires_grad`` as ``True``(``a.requires_grad_(True)``), it starts to track all operations on it. When you finish your computation you can call ``.backward()`` and have all the gradients computed automatically. The gradient for this tensor will be accumulated into ``.grad`` attribute.
+* a ``.grad_fn`` attribute that references a ``Function`` that has created the ``Tensor``
+* If you want to compute the derivatives, you can call ``.backward()`` on a ``Tensor``. If ``Tensor`` is a scalar (i.e. it holds a one element data), you don’t need to specify any arguments to ``backward()``,however if it has more elements, you need to specify a ``gradient`` argument that is a tensor of matching shape.
